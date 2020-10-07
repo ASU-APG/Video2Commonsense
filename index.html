@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>V2C</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="static/styles/index.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/hk-grotesk" type="text/css"/>
+        <link rel="icon" href="static/images/favicon.png">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+         <!--   JS IMPORTS   -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js" integrity="sha256-iaqfO5ue0VbSGcEiQn+OeXxnxAMK2+QgHXIDA5bWtGI=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js" integrity="sha256-Gn7MUQono8LUxTfRA0WZzJgTua52Udm1Ifrk5421zkA=" crossorigin="anonymous"></script>
+<!--         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/> -->
+        <link rel="stylesheet" href="static/styles/prism.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+      <style>
+        p.rank{
+          padding-left:50px;
+        }
+        body {
+          font-family: 'HankenGroteskRegular';
+          background-color:#E0E0E0;
+        }
+      </style>
+      <body>
+      <div class="header">
+          <h1><img src="static/images/V2C.png" width="10%" draggable="false">  <b>V2C</b> (<u><b>V</b></u>ideo-<u>to</u>-<u><b>C</b></u>ommonsense)</h1>
+          <h3> Understanding the video by enriching captions with Commonsense Knowledge. </h3> 
+      </div>
+      <div class="container">
+          <div class="row">
+            <div class="col-md-7 box ">
+              <h3>About Video to Commonsense? </h3>
+              <p>Captioning is a crucial and challenging task forvideo  understanding. In  videos  that  involve active agents such as humans, the agent’s actions  can  bring  about  myriad  changes  in  thescene. Observable  changes  such  as  movements, manipulations, and transformations ofthe objects in the scene,  are reflected in conventional video captioning. Unlike images, actions  in  videos  are  also  inherently  linked  tosocial aspects such as intentions (why the action is taking place), effects (what changes dueto the action), and attributes that describe theagent. <br><br>Thus for video understanding,  such as  when  captioning  videos  or  when  answering questions about videos, one must have anunderstanding of these commonsense aspects.We present the first work on generating commonsense captions  directly  from  videos,  to describe latent aspects such as intentions,  effects, and attributes. We present a new dataset “Video-to-Commonsense (<b>V2C</b>)” that contains ∼9k videos of human agents performing various  actions,  annotated  with  3  types  of  commonsense  descriptions.  </p>
+              <center>
+               <a href="https://arxiv.org/pdf/2003.05162.pdf" target="_blank"> <button class="button"> <i class="fa fa-newspaper-o" aria-hidden="true"></i> V2C Paper (EMNLP'20 Long Paper)</button></a>
+              <hr>
+                <p>Download the V2C dataset</p>
+                <a href="https://drive.google.com/file/d/1GZpV6Mm60ASunFWU23LHCEtDU_uuWyNB/view?usp=sharing"><button class="button"><i class="fa  fa-download"></i> Download Annotations (38.1 MB)</button></a>
+                <a href="https://drive.google.com/drive/folders/1XMteYdtw0UXlqCnTKozkJR5WQbvtd1ba?usp=sharing"><button class="button"><i class="fa fa-download"></i> Download Video Features  (2.9 GB)</button></a> <br> <br>
+                Videos in V2C are inherited from MSR-VTT video dataset, we use the most common used 2D visual features by ImageNet pre-trained ResNet-152 model. 
+              <hr>
+
+                <h3>Distribution and Usage</h3>
+                <p>V2C is curated from multiple online resources (MSR-VTT Video Dataset and ATOMIC Person Commonsense Dataset). 
+                Creation of V2C is purely research oriented. If you find our dataset or model helpful, please cite our paper
+                <p style="text-align:left;">
+                <small>
+                <code style="color:#e83e8c; line-height:2.0" ;="">
+                    @article{fang2020video2commonsense,<br>
+                    &nbsp;title={Video2commonsense: Generating commonsense descriptions to enrich video captioning},<br>
+                    &nbsp;author={Fang, Zhiyuan and Gokhale, Tejas and Banerjee, Pratyay and Baral, Chitta and Yang, Yezhou},<br>
+                    &nbsp;journal={arXiv preprint arXiv:2003.05162},<br>
+                    &nbsp;year={2020}<br>
+                    }
+                </code>
+                </small>
+                </p>
+                </p> 
+              <hr>   
+              <small>
+              <b>Authors</b>: <a href="http://www.public.asu.edu/~zfang29/" target="_blank"> Zhiyuan Fang</a>, <a href="https://www.public.asu.edu/~tgokhale/" target="_blank">Tejas Banerjee</a>, <a href="https://pratyay-banerjee.github.io/" target="_blank">Pratyay Banerjee</a>, <a href="http://www.public.asu.edu/~cbaral/" target="_blank">Baral Chitta</a> and <a href="https://yezhouyang.engineering.asu.edu/" target="_blank">Yezhou Yang</a> <br> Active Perception Group & Cognition and Intelligence Lab, Arizona State University<hr> 
+              
+              </small> 
+              </div>
+
+              
+			<div class="col-md-5 box">
+                <div id="container" style="width: 100%">
+                  <!-- <script id="template" type="x-tmpl-mustache"> -->
+                    <h3> Annotation Examples </h3>
+
+          					<div class="container" style="width:100%;">
+          					  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+          					    <!-- Indicators -->
+          					    <ol class="carousel-indicators">
+          					      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          					      <li data-target="#myCarousel" data-slide-to="1"></li>
+          					      <li data-target="#myCarousel" data-slide-to="2"></li>
+          					    </ol>
+
+          					    <!-- Wrapper for slides -->
+          					    <div class="carousel-inner">
+          					      <div class="item active">
+          								<video style="width:100%;" autoplay muted loop>
+          								  <source src="static/videos/video7030.mp4" type="video/mp4">
+          								</video>
+          								<pre class="language-scss" style="font-size:18px;"><code class="language-scss"><span class="token property"><span class="token selector">Event Captions</span></span><span class="token punctuation">:</span> Group of people is dancing  <br> togther in a room<span class="token punctuation">;</span><br><span class="token property">Itention</span><span class="token punctuation">:</span> Because they wanted:<br>          <i>to have fun;<br>          to feel good;<br>          to celebrate;<br>          to attract a mate</i><span class="token punctuation">;<br></span>					<span class="token variable">Effect</span><span class="token punctuation">:</span> As a result, they will:<br>          <i>feel light and free;<br>          be happy;<br>          feel excited;<br>          get exercised</i><span class="token punctuation">;</span><span class="token function"><br>Attribute</span><span class="token punctuation">:</span> They are seen as:<br>          <i>open;<br>          active;<br>          careless;<br>          artistic</i><span class="token punctuation">;</span></code></pre>
+          						  </div>
+
+          					      <div class="item">
+          								<video style="width:100%;" autoplay muted loop>
+          								  <source src="static/videos/video4266.mp4" type="video/mp4">
+          								</video>
+          								<pre class="language-scss" style="font-size:18px;"><code class="language-scss"><span class="token property"><span class="token selector">Event Captions</span></span><span class="token punctuation">:</span> A band plays at a concert<span class="token punctuation">;</span><br><span class="token property">Itention</span><span class="token punctuation">:</span> Because they wanted:<br>          <i>to enjoy the evening;<br>          to enjoy the concert;<br>          to make his presence felt;<br>          to entertain</i><span class="token punctuation">;<br></span>					<span class="token variable">Effect</span><span class="token punctuation">:</span> As a result, they will:<br>          <i>gets applaus;<br>          shuts off X-Box;<br>          Gets recognition;<br>          gets standing ovation</i><span class="token punctuation">;</span><br><span class="token function">Attribute</span><span class="token punctuation">:</span> They are seen as:<br>          <i>playful;<br>          Acting;<br>          sociable;<br>          Entertainer</i><span class="token punctuation">;</span></code></pre>					      </div>
+          					    
+          					      <div class="item">
+          								<video style="width:100%;" autoplay muted loop>
+          								  <source src="static/videos/video2147.mp4" type="video/mp4">
+          								</video>
+          								<pre class="language-scss" style="font-size:18px;"><code class="language-scss"><span class="token property"><span class="token selector">Event Captions</span></span><span class="token punctuation">:</span>A man gives information <br>about an apple computer<span class="token punctuation">;</span><br><span class="token property">Itention</span><span class="token punctuation">:</span> Because they wanted:<br>          <i>to share knowledge;<br>          to help;<br>          person asked x some information;<br>          to learn about electronics</i><span class="token punctuation">;<br></span>					<span class="token variable">Effect</span><span class="token punctuation">:</span> As a result, they will:<br>          <i>programs computers at his job;<br>          looks at the monitor of it;<br>          boots up the computer;<br>          sets up computer</i><span class="token punctuation">;</span><br><span class="token function">Attribute</span><span class="token punctuation">:</span> They are seen as:<br>          <i>geeky;<br>          knowledgeable;<br>          technical;<br>          smart</i><span class="token punctuation">;</span></code></pre>					      </div>
+          					    </div>
+
+          					    <!-- Left and right controls -->
+          					    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          					      <span class="glyphicon glyphicon-chevron-left"></span>
+          					      <span class="sr-only">Previous</span>
+          					    </a>
+          					    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          					      <span class="glyphicon glyphicon-chevron-right"></span>
+          					      <span class="sr-only">Next</span>
+          					    </a>
+          					  </div>
+          					</div>
+          				</script>
+                  </div>
+
+
+          </body>
+      </html>
+<script type="text/javascript">
+  (function($) {
+    var LEADERBOARD_JSON = 'https://hucvl.github.io/recipeqa/leaderboard.json';
+    var template = $('#template').html();
+    Mustache.parse(template);
+    var test = [];
+    var submissions = [];
+    var ms_data = {
+        submissions:[],
+      };
+    $.getJSON(LEADERBOARD_JSON).done(function (data) {
+      for (var i = 0; i < data.leaderboard.length; i++) {
+            if(data.leaderboard[i].scores.textual_cloze != null || data.leaderboard[i].scores.visual_cloze != null || 
+              data.leaderboard[i].scores.visual_coherence != null || data.leaderboard[i].scores.visual_ordering != null){
+                test.push(data.leaderboard[i])
+            }
+          }
+      for (var i = 0; i < test.length; i++){
+            ms_data['submissions'].push(test[i])
+            var item = test[i];
+            item.rank = i + 1;
+            item.scores['textual_cloze']=parseFloat(item.scores['textual_cloze']).toFixed(3)
+            item.scores['visual_coherence']=parseFloat(item.scores['visual_coherence']).toFixed(3)
+            item.scores['visual_cloze']=parseFloat(item.scores['visual_cloze']).toFixed(3)
+            item.scores['visual_ordering']=parseFloat(item.scores['visual_ordering']).toFixed(3)
+            var submission = item["submission"]
+            var created = item['submission']['created']
+            var submissionInfo = item['submission']['description'];
+            item.created = moment.unix(created).format('MMM DD, YYYY');
+            item.config = data.config;
+        }
+        var rendered = Mustache.render(template, ms_data);
+        $('#container').html(rendered);
+          }).fail(function () {
+            $('#container').html('This leaderboard is not ready yet.');
+          });
+        })(jQuery);
+ </script>
